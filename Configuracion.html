@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuración del Sistema | SMS IA Predict</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <h1>SMS <span>IA</span> Predict | Configuración</h1>
+        </div>
+        <nav class="nav-links">
+            <a href="Index.html">Inicio</a>
+            <div class="dropdown">
+                <button class="dropbtn">Inteligencia Artificial ▾</button>
+                <div class="dropdown-content">
+                    <a href="Datos.html">1. Datos</a>
+                    <a href="MachineLearning.html">2. Machine Learning</a>
+                    <a href="InteligenciaArtificial.html">3. IA Cognitiva</a>
+                    <a href="Agentes.html">4. Agentes Autónomos</a>
+                </div>
+            </div>
+            <a href="Dashboard.html">Dashboard IA</a>
+            <a href="Modulos.html">Módulos SMS</a>
+            <a href="ReportesPredictivos.html">Reportes Predictivos</a>
+            <a href="Configuracion.html" class="active">Configuración</a>
+        </nav>
+        <div class="search-container">
+            <input type="text" placeholder="Buscar ajustes..." class="search-bar">
+            <button class="search-btn">🔍</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="dashboard-hero">
+            <div class="hero-content">
+                <h2>Configuración General y Gobernanza de Datos</h2>
+                <p class="hero-text">Administre los accesos, la ingesta de datos operativos y los parámetros éticos y de
+                    privacidad del motor
+                    de Inteligencia Artificial (Alineado al RACAE 219 y Doc 9859).</p>
+            </div>
+        </section>
+
+        <section class="config-content">
+            <form action="/guardar-configuracion" method="POST" class="config-form">
+
+                <div class="pilar-section">
+                    <div class="pilar-title-group">
+                        <span class="pilar-hero-icon">👥</span>
+                        <div>
+                            <h3>1. Gestión de Usuarios y Roles Organizacionales</h3>
+                            <p class="pilar-description">Administre quién tiene acceso a la plataforma y qué nivel de
+                                permisos posee.</p>
+                        </div>
+                    </div>
+
+                    <div class="form-group-row">
+                        <div class="form-group" style="flex: 2;">
+                            <label for="nuevo-usuario">Invitar nuevo usuario (Email Institucional):</label>
+                            <input type="email" id="nuevo-usuario" name="nuevo_usuario"
+                                placeholder="ejemplo@aerolinea.com" class="form-control">
+                        </div>
+                        <div class="form-group" style="flex: 2;">
+                            <label for="rol-usuario">Asignar Rol de Seguridad:</label>
+                            <select id="rol-usuario" name="rol_usuario" class="form-control">
+                                <option value="ejecutivo">Ejecutivo Responsable (Lectura Global / KPI)</option>
+                                <option value="safety_manager">Safety Manager (Acceso Total SMS)</option>
+                                <option value="analista_ia">Analista/Científico de Datos (Modelos)</option>
+                                <option value="jefe_sei">Jefe de SEI</option>
+                                <option value="operador">Personal Operativo/Tripulación (Reportes)</option>
+                            </select>
+                        </div>
+                        <div class="form-group" style="flex: 1; justify-content: flex-end;">
+                            <button type="button" class="cta-button" style="width: 100%;">Añadir Usuario</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pilar-section">
+                    <div class="pilar-title-group">
+                        <span class="pilar-hero-icon">🔌</span>
+                        <div>
+                            <h3>2. Ingesta de Datos y Conexiones (APIs / ETL)</h3>
+                            <p class="pilar-description">Configure los canales desde donde la IA extraerá la información
+                                para sus inferencias.</p>
+                        </div>
+                    </div>
+
+                    <div class="checkbox-group">
+                        <label class="custom-checkbox">
+                            <input type="checkbox" id="api-foqa" name="api_foqa" checked>
+                            <span class="checkmark"></span>
+                            <div class="checkbox-text">
+                                <strong>Telemetría de Vuelo (FOQA / FDM):</strong> Conexión activa con servidores de
+                                datos de vuelo para análisis de desviaciones.
+                            </div>
+                        </label>
+
+                        <label class="custom-checkbox">
+                            <input type="checkbox" id="api-bash" name="api_bash" checked>
+                            <span class="checkmark"></span>
+                            <div class="checkbox-text">
+                                <strong>Radar Ornitológico y Clima:</strong> Conexión con sensores perimetrales para el
+                                programa BASH (Riesgo de Fauna).
+                            </div>
+                        </label>
+
+                        <label class="custom-checkbox">
+                            <input type="checkbox" id="api-mantenimiento" name="api_mantenimiento">
+                            <span class="checkmark"></span>
+                            <div class="checkbox-text">
+                                <strong>Software de Mantenimiento (ERP/MRM):</strong> Conexión con registros técnicos de
+                                aeronaves y vehículos SEI.
+                            </div>
+                        </label>
+                    </div>
+                    <div style="margin-top: 1.5rem;">
+                        <button type="button" class="cta-button btn-outline">Probar Conexiones de Datos</button>
+                    </div>
+                </div>
+
+                <div class="pilar-section">
+                    <div class="pilar-title-group">
+                        <span class="pilar-hero-icon">🧠</span>
+                        <div>
+                            <h3>3. Parámetros del Motor de IA y Privacidad</h3>
+                            <p class="pilar-description">Ajustes críticos para mantener la confianza del personal en los
+                                reportes voluntarios.</p>
+                        </div>
+                    </div>
+
+                    <div class="form-group-row">
+                        <div class="form-group">
+                            <label for="anonimizacion">Nivel de Anonimización de Reportes (NLP):</label>
+                            <select id="anonimizacion" name="anonimizacion" class="form-control">
+                                <option value="estricta" selected>Estricta (Elimina nombres, N° vuelo, fechas)</option>
+                                <option value="parcial">Parcial (Elimina nombres, mantiene datos operativos)</option>
+                                <option value="nula">Sin Anonimizar (Solo para auditorías restringidas)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="reentrenamiento">Frecuencia de Reentrenamiento del Modelo:</label>
+                            <select id="reentrenamiento" name="reentrenamiento" class="form-control">
+                                <option value="diario">Diario (Alta demanda computacional)</option>
+                                <option value="semanal" selected>Semanal (Recomendado)</option>
+                                <option value="mensual">Mensual (Bajo consumo, menor precisión reciente)</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pilar-section">
+                    <div class="pilar-title-group">
+                        <span class="pilar-hero-icon">🔔</span>
+                        <div>
+                            <h3>4. Reglas de Notificación Automática</h3>
+                            <p class="pilar-description">Defina cómo y cuándo el sistema comunicará alertas urgentes a
+                                la organización.</p>
+                        </div>
+                    </div>
+
+                    <div class="checkbox-group">
+                        <label class="custom-checkbox">
+                            <input type="checkbox" id="notif-critica" name="notif_critica" checked>
+                            <span class="checkmark"></span>
+                            <div class="checkbox-text">
+                                Enviar SMS/Email al Comité de Seguridad ante Alertas Predictivas
+                                <strong>Críticas</strong> (Ej. Probabilidad de impacto > 85%).
+                            </div>
+                        </label>
+
+                        <label class="custom-checkbox">
+                            <input type="checkbox" id="notif-mantenimiento" name="notif_mantenimiento" checked>
+                            <span class="checkmark"></span>
+                            <div class="checkbox-text">
+                                Generar orden de trabajo automática en ERP cuando la IA detecte degradación en bombas de
+                                vehículos SEI.
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="cta-button">Guardar Configuración del Sistema</button>
+                    <button type="reset" class="cta-button btn-outline cta-danger-outline">Descartar Cambios</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer
+        style="text-align: center; padding: 2rem; color: var(--text-muted); border-top: 1px solid rgba(255, 255, 255, 0.1); margin-top: 3rem;">
+        <p>&copy; 2026 SMS IA Predict. Integrando la IA en la Seguridad Operacional.</p>
+    </footer>
+
+</body>
+
+</html>

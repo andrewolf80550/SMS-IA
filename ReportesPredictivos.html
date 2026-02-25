@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reportes Predictivos | SMS IA Predict</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <h1>SMS <span>IA</span> Predict | Reportes</h1>
+        </div>
+        <nav class="nav-links">
+            <a href="Index.html">Inicio</a>
+            <div class="dropdown">
+                <button class="dropbtn">Inteligencia Artificial ▾</button>
+                <div class="dropdown-content">
+                    <a href="Datos.html">1. Datos</a>
+                    <a href="MachineLearning.html">2. Machine Learning</a>
+                    <a href="InteligenciaArtificial.html">3. IA Cognitiva</a>
+                    <a href="Agentes.html">4. Agentes Autónomos</a>
+                </div>
+            </div>
+            <a href="Dashboard.html">Dashboard IA</a>
+            <a href="Modulos.html">Módulos SMS</a>
+            <a href="ReportesPredictivos.html" class="active">Reportes Predictivos</a>
+            <a href="Configuracion.html">Configuración</a>
+        </nav>
+        <div class="search-container">
+            <input type="text" placeholder="Buscar reportes..." class="search-bar">
+            <button class="search-btn">🔍</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="dashboard-hero">
+            <div class="hero-content">
+                <h2>Generador de Reportes Predictivos</h2>
+                <p class="hero-text">Utilice nuestros modelos de Machine Learning pre-entrenados para proyectar
+                    escenarios de riesgo operacional, optimizar recursos y exportar datos para auditorías OACI/EASA.</p>
+            </div>
+        </section>
+
+        <section class="reportes-config-section">
+            <div class="pilar-section">
+                <div class="pilar-title-group">
+                    <span class="pilar-hero-icon">⚙️</span>
+                    <div>
+                        <h3>Configuración del Modelo Predictivo</h3>
+                        <p class="pilar-description">Defina los parámetros de inferencia para generar el reporte
+                            predictivo.</p>
+                    </div>
+                </div>
+
+                <form action="/generar-reporte" method="POST" class="reporte-form">
+                    <div class="form-group">
+                        <label for="tipo-modelo">Seleccionar Área Operacional:</label>
+                        <select id="tipo-modelo" name="tipo_modelo" required class="form-control">
+                            <option value="bash">Proyección BASH y Migración de Fauna</option>
+                            <option value="sei">Disponibilidad y Despliegue de Vehículos SEI</option>
+                            <option value="fatiga">Modelo Biomatemático de Fatiga (Tripulación)</option>
+                            <option value="mantenimiento">Mantenimiento Predictivo (Fallo de Componentes)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="horizonte">Horizonte Predictivo:</label>
+                        <select id="horizonte" name="horizonte" class="form-control">
+                            <option value="7d">Próximos 7 Días</option>
+                            <option value="30d">Próximo Mes (30 Días)</option>
+                            <option value="90d">Próximo Trimestre (90 Días)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="umbral-confianza">Umbral de Confianza del Modelo (NLP/ML):</label>
+                        <div class="range-container">
+                            <input type="range" id="umbral-confianza" name="umbral_confianza" min="70" max="99"
+                                value="95" class="form-range"
+                                oninput="document.getElementById('conf-value').innerText = this.value + '%'">
+                            <span class="range-value" id="conf-value">95%</span>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="cta-button">Ejecutar Inferencia y Generar Reporte</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="reportes-resultados">
+            <h3 class="section-subtitle" style="max-width: 1200px; margin: 0 auto 2rem; padding: 0 5%;">Últimos Reportes
+                Generados</h3>
+
+            <div class="reportes-list">
+                <article class="reporte-card alert-item high-risk">
+                    <div class="alert-header">
+                        <span class="alert-icon">📄</span>
+                        <div style="flex:1;">
+                            <h4>Proyección de Riesgo Avifauna (BASH) - Trimestre Q4</h4>
+                            <span class="badge badge-high" style="display:inline-block; margin-top:0.5rem;">Riesgo
+                                Elevado</span>
+                        </div>
+                        <time datetime="2026-02-23" class="time-badge">23 Feb, 2026</time>
+                    </div>
+                    <div class="alert-content">
+                        <p><strong>Resumen Ejecutivo (NLP):</strong> El modelo XGBoost, cruzando datos históricos de
+                            impactos con patrones climáticos y de humedad actuales, proyecta un incremento del 34% en la
+                            probabilidad de incursión de aves migratorias en la senda de aproximación sur.</p>
+                        <ul class="elements-list" style="margin-top: 1rem;">
+                            <li><strong>Precisión del Modelo:</strong> 94.2%</li>
+                            <li><strong>Variables Críticas:</strong> Humedad relativa (>80%), Temperatura media (24°C).
+                            </li>
+                            <li><strong>Acción Prescriptiva:</strong> Reforzar el patrullaje de las unidades de cetrería
+                                robótica entre las 05:00 y las 08:00 horas.</li>
+                        </ul>
+                        <div class="reporte-actions">
+                            <button type="button" class="cta-button">Descargar PDF</button>
+                            <button type="button" class="cta-button btn-outline">Exportar CSV (Raw Data)</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="reporte-card alert-item medium-risk">
+                    <div class="alert-header">
+                        <span class="alert-icon">📄</span>
+                        <div style="flex:1;">
+                            <h4>Análisis de Fiabilidad: Flota de Vehículos SEI</h4>
+                            <span class="badge badge-medium"
+                                style="display:inline-block; margin-top:0.5rem;">Mantenimiento Requerido</span>
+                        </div>
+                        <time datetime="2026-02-22" class="time-badge">22 Feb, 2026</time>
+                    </div>
+                    <div class="alert-content">
+                        <p><strong>Resumen Ejecutivo (NLP):</strong> El análisis de series temporales sobre la
+                            telemetría de los camiones de bomberos aeronáuticos indica una degradación progresiva en los
+                            sistemas de dispersión de espuma fluoroproteínica de la Unidad 3.</p>
+                        <ul class="elements-list" style="margin-top: 1rem;">
+                            <li><strong>Precisión del Modelo:</strong> 91.8%</li>
+                            <li><strong>Fallo Proyectado:</strong> Bomba principal en 14 días (Intervalo de confianza
+                                95%).</li>
+                            <li><strong>Acción Prescriptiva:</strong> Iniciar protocolo de remanufactura y mantenimiento
+                                preventivo para el componente hidráulico antes del 05 de Marzo. Activar unidad de
+                                respaldo para mantener Categoría OACI del aeródromo.</li>
+                        </ul>
+                        <div class="reporte-actions">
+                            <button type="button" class="cta-button">Descargar PDF</button>
+                            <button type="button" class="cta-button btn-outline">Ver Manuales y Diagramas (Asistente
+                                IA)</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer
+        style="text-align: center; padding: 2rem; color: var(--text-muted); border-top: 1px solid rgba(255, 255, 255, 0.1); margin-top: 3rem;">
+        <p>&copy; 2026 SMS IA Predict. Integrando la IA en la Seguridad Operacional.</p>
+    </footer>
+
+</body>
+
+</html>

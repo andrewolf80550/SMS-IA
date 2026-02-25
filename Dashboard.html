@@ -1,0 +1,234 @@
+<!DOCTYPE html> Dashboard
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard IA | SMS IA Predict</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <h1>SMS <span>IA</span> Predict | Dashboard</h1>
+        </div>
+        <nav class="nav-links">
+            <a href="Index.html">Inicio</a>
+            <div class="dropdown">
+                <button class="dropbtn">Inteligencia Artificial ▾</button>
+                <div class="dropdown-content">
+                    <a href="Datos.html">1. Datos</a>
+                    <a href="MachineLearning.html">2. Machine Learning</a>
+                    <a href="InteligenciaArtificial.html">3. IA Cognitiva</a>
+                    <a href="Agentes.html">4. Agentes Autónomos</a>
+                </div>
+            </div>
+            <a href="Dashboard.html" class="active">Dashboard IA</a>
+            <a href="Modulos.html">Módulos SMS</a>
+            <a href="ReportesPredictivos.html">Reportes Predictivos</a>
+            <a href="Configuracion.html">Configuración</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="dashboard-hero">
+            <div class="hero-content">
+                <h2>Panel de Predicción de Riesgos (Tiempo Real)</h2>
+                <p class="hero-text">Última actualización de modelos de Machine Learning: Hace 2 minutos</p>
+            </div>
+        </section>
+
+        <section class="kpi-grid">
+            <article class="kpi-card">
+                <h3>Índice de Riesgo Predictivo (IRP)</h3>
+                <p class="kpi-value">2.4 <span class="kpi-max">/ 10</span></p>
+                <p class="kpi-trend trend-down">▼ 15% respecto al mes anterior</p>
+            </article>
+
+            <article class="kpi-card">
+                <h3>Reportes Procesados por IA</h3>
+                <p class="kpi-value">1,284</p>
+                <p class="kpi-detail">Clasificación automática completada: 98.5%</p>
+            </article>
+
+            <article class="kpi-card alert-critical">
+                <h3>Alertas Predictivas Activas</h3>
+                <p class="kpi-value">3</p>
+                <p class="kpi-detail">Requieren acción mitigadora inmediata</p>
+            </article>
+        </section>
+
+        <section class="dashboard-content">
+
+            <div class="alertas-ia-section">
+                <h3 class="section-subtitle">Motor de Inferencias: Casos Activos</h3>
+
+                <details class="alert-item high-risk" open>
+                    <summary>
+                        <div class="alert-header">
+                            <span class="alert-icon">🔴</span>
+                            <h4><strong>Alerta BASH:</strong> Probabilidad Crítica de Impacto con Aves (87%)</h4>
+                        </div>
+                    </summary>
+                    <div class="alert-content">
+                        <p><strong>Ubicación:</strong> Cabecera Pista 13R y sector de aproximación.</p>
+                        <p><strong>Análisis IA:</strong> El modelo detecta patrones migratorios anómalos combinados con
+                            factores climáticos actuales (humedad del 85%, viento cruzado 12 nudos).</p>
+                        <p><strong>Recomendación del Sistema:</strong> Despliegue inmediato del programa de prevención
+                            de impactos. Activación de escuadrones de <em>cetrería robótica</em> en cuadrantes Alfa y
+                            Bravo para dispersión controlada sin riesgo para la fauna biológica.</p>
+                        <button type="button" class="cta-button cta-danger">Autorizar Despliegue BASH</button>
+                    </div>
+                </details>
+
+                <details class="alert-item medium-risk">
+                    <summary>
+                        <div class="alert-header">
+                            <span class="alert-icon">🟠</span>
+                            <h4><strong>Alerta Operacional:</strong> Optimización de Respuesta de Extinción de Incendios
+                            </h4>
+                        </div>
+                    </summary>
+                    <div class="alert-content">
+                        <p><strong>Sistema:</strong> Gestión de Recursos de Salvamento.</p>
+                        <p><strong>Análisis IA:</strong> El análisis de la telemetría térmica de los camiones de
+                            respuesta rápida indica una degradación del 15% en la presión de las bombas de espuma
+                            fluoroproteínica en la Unidad 4.</p>
+                        <p><strong>Recomendación del Sistema:</strong> Programar mantenimiento predictivo en las
+                            próximas 48 horas. Reasignar Unidad 2 para cubrir el tiempo de respuesta Categoría 9 de la
+                            OACI.</p>
+                        <button type="button" class="cta-button">Reasignar Unidades de Salvamento</button>
+                    </div>
+                </details>
+
+                <details class="alert-item medium-risk">
+                    <summary>
+                        <div class="alert-header">
+                            <span class="alert-icon">🟠</span>
+                            <h4><strong>Alerta Factores Humanos:</strong> Riesgo de Fatiga en Tripulación</h4>
+                        </div>
+                    </summary>
+                    <div class="alert-content">
+                        <p><strong>Sector:</strong> Operaciones de Vuelo Nocturno (Ruta Norte).</p>
+                        <p><strong>Análisis IA:</strong> El modelo biomatemático de fatiga indica que el 22% de la
+                            tripulación asignada superará el umbral seguro de alerta cognitiva durante la fase de
+                            aproximación, debido a cambios recientes en la programación.</p>
+                        <p><strong>Recomendación del Sistema:</strong> Aplicar contramedidas estratégicas, ajustar
+                            rotación de turnos o activar descanso preventivo.</p>
+                        <button type="button" class="cta-button">Ajustar Programación (CRM)</button>
+                    </div>
+                </details>
+            </div>
+
+            <div class="graficos-tendencias-section" id="graficos-tendencias">
+                <h3 class="section-subtitle">Análisis de Tendencias</h3>
+
+                <div class="chart-container"
+                    style="margin-bottom: 2rem; background: var(--secondary-bg, #1C2541); padding: 1rem; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.05);">
+                    <h4 style="margin-bottom: 1rem; text-align: center; color: #FFFFFF;">Distribución de Peligros
+                        Identificados</h4>
+                    <div style="position: relative; height: 250px; width: 100%;">
+                        <canvas id="peligrosChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="chart-container"
+                    style="background: var(--secondary-bg, #1C2541); padding: 1rem; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.05);">
+                    <h4 style="margin-bottom: 1rem; text-align: center; color: #FFFFFF;">Eficacia de Mitigación y Tasa
+                        de Riesgo</h4>
+                    <div style="position: relative; height: 250px; width: 100%;">
+                        <canvas id="mitigacionChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer
+        style="text-align: center; padding: 2rem; color: var(--text-muted); border-top: 1px solid rgba(255, 255, 255, 0.1); margin-top: 3rem;">
+        <p>&copy; 2026 SMS IA Predict. Integrando la IA en la Seguridad Operacional.</p>
+    </footer>
+
+    <!-- Scripts para Gráficos -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Configuración global para Chart.js para que coincida con el tema oscuro
+        Chart.defaults.color = '#A0ABC0';
+        Chart.defaults.font.family = "'Inter', sans-serif";
+
+        // 1. Gráfico de Distribución de Peligros (Doughnut)
+        const ctxPeligros = document.getElementById('peligrosChart').getContext('2d');
+        new Chart(ctxPeligros, {
+            type: 'doughnut',
+            data: {
+                labels: ['Factores Humanos', 'Entorno/Fauna', 'Mantenimiento', 'Organizacional'],
+                datasets: [{
+                    data: [45, 30, 15, 10],
+                    backgroundColor: [
+                        '#00D4FF', // Cian IA
+                        '#FFA500', // Naranja Alerta Media
+                        '#FF4D4D', // Rojo Alerta Crítica
+                        '#6C63FF'  // Morado
+                    ],
+                    borderWidth: 0,
+                    hoverOffset: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { position: 'bottom' }
+                },
+                cutout: '70%'
+            }
+        });
+
+        // 2. Gráfico de Eficacia de Mitigación (Line)
+        const ctxMitigacion = document.getElementById('mitigacionChart').getContext('2d');
+        new Chart(ctxMitigacion, {
+            type: 'line',
+            data: {
+                labels: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun'],
+                datasets: [
+                    {
+                        label: 'Eficacia Mitigación (%)',
+                        data: [65, 70, 75, 82, 88, 92],
+                        borderColor: '#00D4FF',
+                        backgroundColor: 'rgba(0, 212, 255, 0.1)',
+                        tension: 0.4,
+                        fill: true
+                    },
+                    {
+                        label: 'Tasa de Riesgos Activos',
+                        data: [40, 35, 28, 20, 15, 8],
+                        borderColor: '#FF4D4D',
+                        borderDash: [5, 5],
+                        backgroundColor: 'transparent',
+                        tension: 0.4
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { position: 'bottom' }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        grid: { color: 'rgba(255, 255, 255, 0.05)' }
+                    },
+                    x: {
+                        grid: { display: false }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
